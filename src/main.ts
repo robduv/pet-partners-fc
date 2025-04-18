@@ -1,10 +1,10 @@
-import 'primeicons/primeicons.css'
-
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+import './assets/styles/main.css'
 
 import PrimeVue from 'primevue/config'
 import Aura from '@primeuix/themes/aura'
+
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 
 import App from './App.vue'
 import router from './router'
@@ -18,8 +18,6 @@ app.use(PrimeVue, {
     preset: Aura,
     options: {
       prefix: 'p',
-      darkModeSelector: false,
-      cssLayer: false,
     },
   },
 })
