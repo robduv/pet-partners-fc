@@ -4,7 +4,7 @@ import Menubar from 'primevue/menubar'
 import { ref } from 'vue'
 
 const items = ref([
-  { label: 'Home', icon: 'pi pi-home', route: '/' },
+  { label: 'Pet Partners of Fairfield County', icon: 'pi pi-heart', route: '/' },
   { label: 'About', icon: 'pi pi-info', route: 'about' },
   { label: 'Contact', icon: 'pi pi-phone', route: 'contact' },
 ])
