@@ -3,25 +3,40 @@ import { RouterLink } from 'vue-router'
 import { ref } from 'vue'
 
 const items = ref([
-  { label: 'Pet Partners of Fairfield County', icon: 'pi pi-heart', route: '/' },
-  { label: 'About', icon: 'pi pi-info', route: 'about' },
+  { label: 'Home', icon: 'pi pi-home', route: '/' },
+  { label: 'About', icon: 'pi pi-info-circle', route: 'about' },
   { label: 'Contact', icon: 'pi pi-phone', route: 'contact' },
 ])
 </script>
 
 <template>
   <div
-    class="mx-auto w-full max-w-7xl rounded-2xl border border-surface-200 bg-surface-0 p-6 dark:border-surface-700 dark:bg-surface-900"
+    class="mx-auto w-full max-w-7xl rounded-xl border border-surface-200 bg-surface-0 p-6 dark:border-surface-700 dark:bg-surface-900"
   >
-    <Menubar :model="items" class>
-      <template #item="{ item, props }">
-        <RouterLink v-slot="{ href, navigate }" :to="item.route" custom>
-          <a v-ripple :href="href" v-bind="props.action" @click="navigate">
-            <span :class="item.icon" />
-            <span>{{ item.label }}</span>
-          </a>
+    <div class="text text-surface-600 dark:text-surface-400">
+      <div class="flex items-center justify-start gap-2">
+        <div class="text-lg font-bold">
+          <RouterLink to="/">
+            <a v-ripple>
+              <span>Pet Partners of Fairfield County</span>
+            </a>
+          </RouterLink>
+        </div>
+        <RouterLink
+          v-for="item in items"
+          :key="item.route"
+          v-slot="{ href, navigate }"
+          :to="item.route"
+          custom
+        >
+          <div class="flex">
+            <a v-ripple :href="href" @click="navigate">
+              <span :class="item.icon" />
+              <span class="m-1">{{ item.label }}</span>
+            </a>
+          </div>
         </RouterLink>
-      </template>
-    </Menubar>
+      </div>
+    </div>
   </div>
 </template>
