@@ -27,9 +27,8 @@ const event = defineProps<CalendarEventProps>()
         {{ format(event.date, 'PPPPpppp') }}
       </div>
       <div class="text-sm text-surface-600 dark:text-surface-400">
-        {{ event.location.name
-        }}<a target="_blank" :href="event.location.directionsUrl"
-          ><i class="pi pi-directions m-1"></i
+        <a target="_blank" :href="event.location.directionsUrl"
+          >{{ event.location.name }}<i class="pi pi-directions m-1"></i
         ></a>
       </div>
     </div>
