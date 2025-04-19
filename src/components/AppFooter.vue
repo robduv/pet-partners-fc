@@ -1,10 +1,10 @@
 <template>
   <div
-    class="mx-auto w-full max-w-7xl rounded-2xl border border-surface-200 bg-surface-0 p-6 dark:border-surface-700 dark:bg-surface-900"
+    class="mx-auto w-full max-w-7xl rounded-xl border border-surface-200 bg-surface-0 p-6 dark:border-surface-700 dark:bg-surface-900"
   >
     <div class="flex flex-col items-center justify-between gap-2 sm:flex-row">
       <div class="text-sm text-surface-600 dark:text-surface-400">
-        Pet Partners of Fairfield County
+        © {{ new Date().getFullYear() }} Pet Partners of Fairfield County
       </div>
       <div class="flex gap-4">
         <a
