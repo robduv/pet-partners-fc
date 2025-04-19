@@ -43,7 +43,7 @@ const people = ref({
       data: {
         image: '../../public/favicon.ico',
         name: 'Rob Duval',
-        title: 'Communications',
+        title: 'CTO',
       },
     },
   ],
