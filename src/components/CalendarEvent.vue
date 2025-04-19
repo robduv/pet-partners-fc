@@ -24,7 +24,7 @@ const event = defineProps<CalendarEventProps>()
   >
     <i :class="['pi', event.icon, event.color, 'text-lg!']"></i>
     <div class="flex flex-col gap-1">
-      <div class="text-base">
+      <div class="text-base font-bold">
         <a v-if="event.url" target="_blank" :href="event.url">{{ event.name }}</a
         ><span v-else>{{ event.name }}</span>
       </div>
