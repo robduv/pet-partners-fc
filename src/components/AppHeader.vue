@@ -4,7 +4,7 @@ import { ref } from 'vue'
 
 const items = ref([
   { label: 'Home', icon: 'pi pi-home', route: '/' },
-  { label: 'About', icon: 'pi pi-info-circle', route: 'about' },
+  { label: 'Team', icon: 'pi pi-users', route: 'team' },
   { label: 'Contact', icon: 'pi pi-phone', route: 'contact' },
 ])
 </script>
