@@ -9,6 +9,7 @@ export interface CalendarEventLocation {
 export interface CalendarEventProps {
   icon: string
   name: string
+  url?: string
   date: Date
   location: CalendarEventLocation
 }
@@ -22,7 +23,10 @@ const event = defineProps<CalendarEventProps>()
   >
     <i :class="['pi', event.icon, 'text-lg!']"></i>
     <div class="flex flex-col gap-1">
-      <div class="text-base">{{ event.name }}</div>
+      <div class="text-base">
+        <a v-if="event.url" target="_blank" :href="event.url">{{ event.name }}</a
+        ><span v-else>{{ event.name }}</span>
+      </div>
       <div class="text-sm text-surface-600 dark:text-surface-400">
         {{ format(event.date, 'PPpp') }}
       </div>
