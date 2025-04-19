@@ -6,6 +6,7 @@ const events: CalendarEventProps[] = [
   {
     icon: 'pi-list-check',
     name: 'Team Evaluation',
+    color: 'text-green-500',
     date: new Date(2025, 4, 3, 9, 0, 0),
     location: {
       name: 'Nathaniel Witherell, 70 Parsonage Rd, Greenwich, CT',
@@ -16,6 +17,7 @@ const events: CalendarEventProps[] = [
   {
     icon: 'pi-calendar',
     name: 'Westport Dog Festival',
+    color: 'text-red-500',
     url: 'https://www.westportwestonchamber.com/dogs',
     date: new Date(2025, 4, 18, 10, 0, 0),
     location: {
@@ -27,6 +29,7 @@ const events: CalendarEventProps[] = [
   {
     icon: 'pi-list-check',
     name: 'Team Evaluation',
+    color: 'text-green-500',
     date: new Date(2025, 5, 7, 9, 0, 0),
     location: {
       name: "St. Mark's Episcopal Church, 111 Oenoke Ridge, New Canaan, CT",
@@ -60,6 +63,7 @@ const events: CalendarEventProps[] = [
             v-for="(event, index) in events"
             :key="index"
             :icon="event.icon"
+            :color="event.color"
             :name="event.name"
             :date="event.date"
             :url="event.url"
