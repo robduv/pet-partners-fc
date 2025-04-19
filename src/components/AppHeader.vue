@@ -5,7 +5,8 @@ import { ref } from 'vue'
 const items = ref([
   { label: 'Home', icon: 'pi pi-home', route: '/' },
   { label: 'Team', icon: 'pi pi-users', route: 'team' },
-  { label: 'Contact', icon: 'pi pi-phone', route: 'contact' },
+  { label: 'Sign Up', icon: 'pi pi-user-plus', route: 'sign-up' },
+  { label: 'Contact', icon: 'pi pi-envelope', route: 'contact' },
 ])
 </script>
 
