@@ -10,7 +10,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     AppFooter: typeof import('./src/components/AppFooter.vue')['default']
     AppHeader: typeof import('./src/components/AppHeader.vue')['default']
+    CalendarEvent: typeof import('./src/components/CalendarEvent.vue')['default']
     Chart: typeof import('primevue/chart')['default']
+    EventCard: typeof import('./src/components/EventCard.vue')['default']
     Menubar: typeof import('primevue/menubar')['default']
     OrganizationChart: typeof import('primevue/organizationchart')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
