@@ -11,7 +11,7 @@ const items = ref([
 
 <template>
   <div
-    class="bg-surface-0 dark:bg-surface-900 p-6 rounded-2xl max-w-7xl mx-auto border border-surface-200 dark:border-surface-700 w-full"
+    class="mx-auto w-full max-w-7xl rounded-2xl border border-surface-200 bg-surface-0 p-6 dark:border-surface-700 dark:bg-surface-900"
   >
     <Menubar :model="items" class>
       <template #item="{ item, props }">
