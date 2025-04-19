@@ -14,18 +14,24 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '23'
 
       - name: Install dependencies
         run: npm install
 
+      - name: Check formatting
+        run: npx prettier . --check
+
       - name: Run unit tests
         run: npm run test:unit
+
+      - name: Run end-to-end tests
+        run: npm run test:e2e
 
       - name: Build project
         run: npm run build
