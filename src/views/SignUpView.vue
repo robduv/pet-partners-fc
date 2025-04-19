@@ -4,7 +4,7 @@
   >
     <iframe
       src="https://docs.google.com/forms/d/e/1FAIpQLSeFwBGJt19H6AXSgwm6iGPcTYzgQv5N7sT9sGZbUwgT11kedQ/viewform?embedded=true"
-      class="aspect-video w-full"
+      class="aspect-video"
       frameborder="0"
       marginheight="0"
       marginwidth="0"
