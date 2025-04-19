@@ -24,7 +24,7 @@ const event = defineProps<CalendarEventProps>()
     <div class="flex flex-col gap-1">
       <div class="text-base">{{ event.name }}</div>
       <div class="text-sm text-surface-600 dark:text-surface-400">
-        {{ format(event.date, 'PPPPpppp') }}
+        {{ format(event.date, 'PPpp') }}
       </div>
       <div class="text-sm text-surface-600 dark:text-surface-400">
         <a target="_blank" :href="event.location.directionsUrl"
