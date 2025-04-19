@@ -2,8 +2,8 @@
 import { ref } from 'vue'
 
 const events = ref([
-  { id: 1, type: 'Team Evaluation', date: '2025-05-03' },
-  { id: 2, type: 'Team Evaluation', date: '2025-06-07' },
+  { id: 1, icon: 'pi-list-check', name: 'Team Evaluation', time: '2025-05-03' },
+  { id: 2, icon: 'pi-list-check', name: 'Team Evaluation', time: '2025-06-07' },
 ])
 </script>
 
@@ -26,15 +26,18 @@ const events = ref([
       <div class="flex items-center justify-between">
         <span class="text-lg font-bold">Upcoming Events</span>
       </div>
-      <div class="flex items-center justify-between">
-        <span class="text-md">
-          <ul>
-            <li v-for="event in events" :key="event.id">
-              <span class="font-bold">{{ event.date }}</span
-              ><span>: {{ event.type }}</span>
-            </li>
-          </ul>
-        </span>
+      <div class="flex flex-col gap-3">
+        <div
+          v-for="(event, index) in events"
+          :key="index"
+          class="flex items-center gap-3 rounded-lg border border-surface-200 bg-surface-50 p-3 dark:border-surface-700 dark:bg-surface-800"
+        >
+          <i :class="['pi', event.icon, 'text-lg!']"></i>
+          <div class="flex flex-col gap-1">
+            <span class="text-sm font-medium">{{ event.name }}</span>
+            <span class="text-xs text-surface-600 dark:text-surface-400">{{ event.time }}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
