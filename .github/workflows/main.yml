@@ -25,10 +25,13 @@ jobs:
         run: npm install
 
       - name: Check formatting
-        run: npx prettier . --check
+        run: npm run format:check
 
       - name: Run unit tests
         run: npm run test:unit
+
+      - name: Install browsers for end-to-end testing
+        run: npm run test:e2e:install
 
       - name: Run end-to-end tests
         run: npm run test:e2e
