@@ -15,7 +15,7 @@ const items = ref([
   >
     <div class="text text-surface-600 dark:text-surface-400">
       <div class="flex items-center justify-start gap-2">
-        <div class="text-lg font-bold">
+        <div class="text-xl font-bold">
           <RouterLink to="/">
             <a v-ripple>
               <span>Pet Partners of Fairfield County</span>
@@ -29,7 +29,7 @@ const items = ref([
           :to="item.route"
           custom
         >
-          <div class="flex">
+          <div class="flex text-lg">
             <a v-ripple :href="href" @click="navigate">
               <span :class="item.icon" />
               <span class="m-1">{{ item.label }}</span>
