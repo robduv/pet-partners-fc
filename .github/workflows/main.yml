@@ -30,6 +30,9 @@ jobs:
       - name: Run unit tests
         run: npm run test:unit
 
+      - name: Build project
+        run: npm run build
+
       - name: Install browsers for end-to-end testing
         run: npm run test:e2e:install
 
@@ -42,6 +45,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
-      - name: Build project
-        run: npm run build
