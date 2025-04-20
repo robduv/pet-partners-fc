@@ -16,6 +16,7 @@ const items = ref([
   >
     <div class="text text-surface-600 dark:text-surface-400">
       <div class="flex items-center justify-start gap-2">
+        <img class="h-8 w-8" src="../assets/logo.png" alt="Logo" />
         <div class="text-xl font-bold">
           <RouterLink to="/">
             <a v-ripple>
