@@ -12,10 +12,10 @@ const items = ref([
 
 <template>
   <div
-    class="mx-auto w-full max-w-7xl rounded-xl border border-surface-200 bg-surface-0 p-6 dark:border-surface-700 dark:bg-surface-900"
+    class="mx-auto w-full max-w-7xl rounded-xl border border-surface-200 bg-surface-0 p-6 text-surface-600 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-400"
   >
-    <div class="text text-surface-600 dark:text-surface-400">
-      <div class="flex items-center justify-start gap-2">
+    <div class="flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
         <RouterLink to="/">
           <div class="flex items-center gap-2">
             <img class="h-8 w-8" src="../assets/logo.png" alt="Logo" />
@@ -36,6 +36,16 @@ const items = ref([
             </a>
           </div>
         </RouterLink>
+      </div>
+      <div class="flex justify-end gap-2">
+        <a
+          href="https://www.facebook.com/groups/322425249919492"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-surface-600 transition-colors hover:text-primary dark:text-surface-400"
+        >
+          <i class="pi pi-facebook"></i>
+        </a>
       </div>
     </div>
   </div>
