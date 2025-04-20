@@ -45,9 +45,9 @@ const events: CalendarEventProps[] = [
 <template>
   <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
     <div
-      class="flex flex-col gap-4 rounded-xl border border-surface-200 bg-surface-0 p-6 text-base text-surface-600 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-400"
+      class="flex flex-col gap-4 rounded-xl border border-slate-300 bg-white p-4 text-base text-slate-700"
     >
-      <div class="text-base text-surface-600 dark:text-surface-400">
+      <div class="text-surface-600 dark:text-surface-400 text-base">
         <div class="text-lg font-bold">Welcome</div>
         <span class="font-bold">Pet Partners of Fairfield County</span> is a group of active
         registered Pet Partners teams that reside in Fairfield County, CT. We support members, aim
@@ -56,7 +56,7 @@ const events: CalendarEventProps[] = [
       </div>
     </div>
     <div
-      class="flex flex-col gap-4 rounded-xl border border-surface-200 bg-surface-0 p-6 text-base text-surface-600 dark:border-surface-700 dark:bg-surface-900 dark:text-surface-400"
+      class="flex flex-col gap-4 rounded-xl border border-slate-300 bg-white p-4 text-base text-slate-700"
     >
       <span class="text-lg font-bold">Upcoming Events</span>
       <div class="flex items-center justify-between">

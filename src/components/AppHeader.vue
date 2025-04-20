@@ -27,7 +27,7 @@ const items = ref([
         custom
       >
         <div class="flex text-lg">
-          <a v-ripple :href="href" @click="navigate">
+          <a :href="href" @click="navigate">
             <span :class="item.icon" />
             <span class="m-1">{{ item.label }}</span>
           </a>
@@ -39,7 +39,7 @@ const items = ref([
         href="https://www.facebook.com/groups/322425249919492"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-surface-600 transition-colors hover:text-primary dark:text-surface-400"
+        class="transition-colors hover:text-violet-500"
       >
         <i class="pi pi-facebook"></i>
       </a>
