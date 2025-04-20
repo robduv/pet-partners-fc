@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { format } from 'date-fns'
+import ActionButton from './ActionButton.vue'
 
 export interface CalendarEventLocation {
   name: string
@@ -26,13 +27,30 @@ const event = defineProps<CalendarEventProps>()
     <i :class="['pi', event.icon, event.color, 'text-lg!']"></i>
     <div class="flex flex-col text-sm">
       <div class="text-base font-bold">
-        <a v-if="event.eventSiteUrl" target="_blank" :href="event.eventSiteUrl">{{ event.name }}</a
-        ><span v-else>{{ event.name }}</span>
+        {{ event.name }}
       </div>
       <div class="flex flex-col">
         <span>{{ format(event.date, 'PPp') }}</span>
-        <a target="_blank" :href="event.location.directionsUrl">{{ event.location.name }}</a>
-        <a v-if="event.signupFormUrl" target="_blank" :href="event.signupFormUrl">Volunteer</a>
+        <span>{{ event.location.name }}</span>
+        <div class="flex gap-1">
+          <ActionButton
+            v-if="event.signupFormUrl"
+            :url="event.signupFormUrl"
+            label="Volunteer"
+            icon="pi pi-user-plus"
+          />
+          <ActionButton
+            :url="event.location.directionsUrl"
+            label="Directions"
+            icon="pi pi-directions"
+          />
+          <ActionButton
+            v-if="event.eventSiteUrl"
+            :url="event.eventSiteUrl"
+            label="Info"
+            icon="pi pi-info-circle"
+          />
+        </div>
       </div>
     </div>
   </div>
