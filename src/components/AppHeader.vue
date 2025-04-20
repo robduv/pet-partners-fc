@@ -16,14 +16,12 @@ const items = ref([
   >
     <div class="text text-surface-600 dark:text-surface-400">
       <div class="flex items-center justify-start gap-2">
-        <img class="h-8 w-8" src="../assets/logo.png" alt="Logo" />
-        <div class="text-xl font-bold">
-          <RouterLink to="/">
-            <a v-ripple>
-              <span>Pet Partners of Fairfield County</span>
-            </a>
-          </RouterLink>
-        </div>
+        <RouterLink to="/">
+          <div class="flex items-center gap-2">
+            <img class="h-8 w-8" src="../assets/logo.png" alt="Logo" />
+            <span class="text-xl font-bold">Pet Partners of Fairfield County</span>
+          </div>
+        </RouterLink>
         <RouterLink
           v-for="item in items"
           :key="item.route"
