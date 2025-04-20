@@ -26,7 +26,7 @@ const items = ref([
         :to="item.route"
         custom
       >
-        <div class="flex text-lg">
+        <div class="flex text-lg hover:underline">
           <a :href="href" @click="navigate">
             <span :class="item.icon" />
             <span class="m-1">{{ item.label }}</span>
