@@ -5,7 +5,7 @@ const people = ref({
   key: '0',
   type: 'person',
   data: {
-    image: '../../public/rob.jpeg',
+    image: '/rob.jpeg',
     name: 'River Rahe',
     title: 'CEO',
   },
@@ -14,7 +14,7 @@ const people = ref({
       key: '0_0',
       type: 'person',
       data: {
-        image: '../../public/rob.jpeg',
+        image: '/rob.jpeg',
         name: "Patti O'Keeffe",
         title: 'Evaluator',
       },
@@ -23,7 +23,7 @@ const people = ref({
       key: '0_1',
       type: 'person',
       data: {
-        image: '../../public/rob.jpeg',
+        image: '/rob.jpeg',
         name: 'Katy Rahe',
         title: 'Evaluator',
       },
@@ -32,7 +32,7 @@ const people = ref({
       key: '0_2',
       type: 'person',
       data: {
-        image: '../../public/rob.jpeg',
+        image: '/rob.jpeg',
         name: 'Jennifer Krasnow',
         title: 'Evaluator',
       },
@@ -41,7 +41,7 @@ const people = ref({
       key: '0_3',
       type: 'person',
       data: {
-        image: '../../public/rob.jpeg',
+        image: '/rob.jpeg',
         name: 'Rob Duval',
         title: 'CTO',
       },
