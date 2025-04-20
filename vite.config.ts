@@ -6,19 +6,10 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import tailwindcss from '@tailwindcss/vite'
 import Components from 'unplugin-vue-components/vite'
-import { PrimeVueResolver } from '@primevue/auto-import-resolver'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    tailwindcss(),
-    vueJsx(),
-    vueDevTools(),
-    Components({
-      resolvers: [PrimeVueResolver()],
-    }),
-  ],
+  plugins: [vue(), tailwindcss(), vueJsx(), vueDevTools(), Components()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
