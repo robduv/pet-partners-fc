@@ -22,7 +22,7 @@ const event = defineProps<CalendarEventProps>()
 
 <template>
   <div
-    class="flex items-center gap-2 rounded-lg border border-surface-200 bg-surface-50 p-2 dark:border-surface-700 dark:bg-surface-800"
+    class="flex items-center gap-2 rounded-lg border border-slate-300 bg-slate-100 p-2 text-slate-700"
   >
     <i :class="['pi', event.icon, event.color, 'text-lg!']"></i>
     <div class="flex flex-col text-sm">
