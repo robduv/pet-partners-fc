@@ -8,11 +8,12 @@ export interface CalendarEventLocation {
 
 export interface CalendarEventProps {
   icon: string
-  name: string
   color: string
-  url?: string
+  name: string
   date: Date
   location: CalendarEventLocation
+  eventSiteUrl?: string
+  signupFormUrl?: string
 }
 
 const event = defineProps<CalendarEventProps>()
@@ -23,18 +24,15 @@ const event = defineProps<CalendarEventProps>()
     class="flex items-center gap-3 rounded-lg border border-surface-200 bg-surface-50 p-3 dark:border-surface-700 dark:bg-surface-800"
   >
     <i :class="['pi', event.icon, event.color, 'text-lg!']"></i>
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col text-sm">
       <div class="text-base font-bold">
-        <a v-if="event.url" target="_blank" :href="event.url">{{ event.name }}</a
+        <a v-if="event.eventSiteUrl" target="_blank" :href="event.eventSiteUrl">{{ event.name }}</a
         ><span v-else>{{ event.name }}</span>
       </div>
-      <div class="text-sm text-surface-600 dark:text-surface-400">
-        <div>{{ format(event.date, 'PPp') }}</div>
-        <div>
-          <a target="_blank" :href="event.location.directionsUrl"
-            >{{ event.location.name }}<i class="pi pi-directions m-1"></i
-          ></a>
-        </div>
+      <div class="flex flex-col">
+        <span>{{ format(event.date, 'PPp') }}</span>
+        <a target="_blank" :href="event.location.directionsUrl">{{ event.location.name }}</a>
+        <a v-if="event.signupFormUrl" target="_blank" :href="event.signupFormUrl">Volunteer</a>
       </div>
     </div>
   </div>

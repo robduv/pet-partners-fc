@@ -18,13 +18,15 @@ const events: CalendarEventProps[] = [
     icon: 'pi-calendar',
     name: 'Westport Dog Festival',
     color: 'text-red-500',
-    url: 'https://www.westportwestonchamber.com/dogs',
     date: new Date(2025, 4, 18, 10, 0, 0),
     location: {
       name: 'Winslow Park, 25 CT-136, Westport, CT 06880',
       directionsUrl:
         'https://www.google.com/maps/dir//25+CT-136,+Westport,+CT+06880/@41.1417632,-73.4356245,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89e81b73ff04ca73:0x5c6c545f097fdb96!2m2!1d-73.3532237!2d41.1417926',
     },
+    eventSiteUrl: 'https://www.westportwestonchamber.com/dogs',
+    signupFormUrl:
+      'https://docs.google.com/forms/d/e/1FAIpQLSdk7NWFeIpBazh4o-fV86nVdxxVT35swpXjq3sbcZjpauHRwA/viewform',
   },
   {
     icon: 'pi-list-check',
@@ -66,8 +68,9 @@ const events: CalendarEventProps[] = [
             :color="event.color"
             :name="event.name"
             :date="event.date"
-            :url="event.url"
             :location="event.location"
+            :eventSiteUrl="event.eventSiteUrl"
+            :signupFormUrl="event.signupFormUrl"
           />
         </div>
       </div>
