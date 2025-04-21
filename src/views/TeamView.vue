@@ -24,7 +24,7 @@ const teamMembers: TeamMemberProps[] = [
     name: 'Rob Duval',
     role: 'CTO',
     imageUrl: '/rob.jpeg',
-    bio: 'This is a test bio for Rob Duval. He is the Chief Technology Officer and has extensive experience in software development and team management.',
+    bio: 'This is a test bio for Rob Duval. He is the Chief Technology Officer and pet therapy team with his dog Sybil.',
   },
 ]
 </script>
@@ -35,6 +35,7 @@ const teamMembers: TeamMemberProps[] = [
   >
     <div class="text-lg font-bold">Meet the Team</div>
     <TeamMember
+      class="m-2 ml-6"
       v-for="(member, index) in teamMembers"
       :key="index"
       :name="member.name"
