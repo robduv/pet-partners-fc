@@ -9,7 +9,7 @@ import AppFooter from './components/AppFooter.vue'
     <div class="rounded-xl border border-slate-300 bg-white p-4 text-slate-700">
       <AppHeader />
     </div>
-    <div class="flex flex-1 flex-col gap-6">
+    <div class="flex flex-1 flex-col">
       <RouterView />
     </div>
     <div class="rounded-xl border border-slate-300 bg-white p-4 text-slate-700">
