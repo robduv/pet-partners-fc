@@ -16,6 +16,7 @@ declare module 'vue' {
     OrganizationChart: typeof import('primevue/organizationchart')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TeamMember: typeof import('./src/components/TeamMember.vue')['default']
   }
   export interface ComponentCustomProperties {
     Ripple: typeof import('primevue/ripple')['default']
