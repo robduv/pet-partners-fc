@@ -35,7 +35,7 @@ const teamMembers: TeamMemberProps[] = [
   >
     <div class="text-lg font-bold">Meet the Team</div>
     <TeamMember
-      class="m-2 ml-6"
+      class="m-4 ml-6"
       v-for="(member, index) in teamMembers"
       :key="index"
       :name="member.name"
